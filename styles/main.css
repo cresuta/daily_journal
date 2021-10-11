@@ -27,3 +27,23 @@ h6 {
   width: 150px;
   height: 150px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.journal-date,
+.journal-concepts,
+.journal-entry,
+.journal-mood {
+  border: 2px solid darkgrey;
+}
+
+.journal-form {
+  margin: 1em 5em;
+}
+
+label {
+  padding: 0.5em;
+}
