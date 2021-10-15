@@ -28,6 +28,7 @@ h6 {
   height: 150px;
 }
 
+/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -48,6 +49,14 @@ label {
   padding: 0.5em;
 }
 
+/* Journal Entries */
+.journal-entries {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Footer */
 footer {
   display: flex;
   justify-content: center;
