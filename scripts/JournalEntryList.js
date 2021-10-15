@@ -7,7 +7,6 @@ export const EntryListComponent = () => {
 
     const entries = useJournalEntries();
 
-
     for(let entry of entries) {
         entryLog.innerHTML += JournalEntryComponent(entry);
     }

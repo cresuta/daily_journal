@@ -28,6 +28,10 @@ h6 {
   height: 150px;
 }
 
+body {
+  background-color: #fbf1e3;
+}
+
 /* Form */
 form {
   display: flex;
@@ -54,7 +58,16 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 5em 5em;
 }
+
+/* .entry {
+  margin: 0 4em;
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
 
 /* Footer */
 footer {
