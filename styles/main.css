@@ -61,13 +61,17 @@ label {
   margin: 5em 5em;
 }
 
-/* .entry {
+.entry {
   margin: 0 4em;
   width: 33vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-} */
+}
+
+.mood {
+  font-size: 2em;
+}
 
 /* Footer */
 footer {
