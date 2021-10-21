@@ -28,6 +28,13 @@ const journal = [
         concept: "JavaScript, HTML, and CSS",
         entry: "We continued to work with JavaScript on our Martin's Aquarium project, by utilizing the DOM to auto populate our webpage content with JavaScript.",
         mood: "Ok"
+    },
+    {
+        id: 4,
+        date: "10/21/2021",
+        concept: "JavaScript, HTML, CSS, and Bootstrap",
+        entry: "Today we finished our 2nd group project which was similar to the 1st group project, but we were required to render all of our html using javascript. This project I wanted to get more comfortable with Bootstrap, so my entire country's page was done in Bootstrap.",
+        mood: "Happy"
     }
 ]
 
