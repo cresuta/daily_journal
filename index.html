@@ -22,84 +22,11 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="imgs/logo.png"
-              alt=""
-              width="30"
-              height="24"
-              class="d-inline-block align-text-top"
-              id="header-logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Concepts</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Author</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <!-- navbar rendered by main.js -->
     </header>
     <main>
       <section class="journal-form">
-        <h2>Daily Journal</h2>
-        <form action="">
-          <fieldset class="journal-date">
-            <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate" />
-          </fieldset>
-          <fieldset class="journal-concepts">
-            <label for="journalConcepts">Concepts covered</label>
-            <input type="text" name="journalConcepts" id="journalConcepts" />
-          </fieldset>
-          <fieldset class="journal-entry">
-            <label for="journalEntry">Journal Entry</label>
-            <textarea
-              name="text"
-              id="journalEntry"
-              cols="30"
-              rows="2"
-            ></textarea>
-          </fieldset>
-          <fieldset class="journal-mood">
-            <label for="journalMood">Mood for the day</label>
-            <select name="" id="journalMood">
-              <option value="happy">Happy</option>
-              <option value="ok">Ok</option>
-              <option value="sad">Sad</option>
-            </select>
-          </fieldset>
-        </form>
-        <button type="button" class="btn btn-light btn-outline-dark">
-          <i class="bi bi-journal-check"></i>
-          Record Journal Entry
-        </button>
+        <!-- journal form rendered by main.js -->
       </section>
       <section class="journal-entries">
         <!-- rendered by main.js -->
@@ -107,15 +34,7 @@
     </main>
 
     <footer class="bg-light">
-      <div class="footer-github">
-        <button type="button" class="btn btn-light btn-outline-dark">
-          <a target="_blank" href="https://github.com/cresuta/daily_journal">
-            <i class="bi bi-github github-logo"></i>
-          </a>
-          Github
-        </button>
-      </div>
-      <div class="footer-copyright">Cameron's Daily Journal &copy;2021</div>
+      <!-- footer rendered by main.js -->
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
