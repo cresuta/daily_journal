@@ -70,6 +70,12 @@ label {
   justify-content: center;
 }
 
+.notebook-icon {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 0.25em;
+}
+
 .mood {
   font-size: 2em;
 }
