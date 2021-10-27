@@ -14,7 +14,6 @@ export const EntryListComponent = () => {
         })
         
         contentTarget.innerHTML = `
-        <h2>Journal Entries</h2>
         ${journalEntryListHTML}
         `
     })
