@@ -91,10 +91,13 @@ label {
 /* Journal Entries */
 .journal-entries {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5em 5em;
-  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em;
+}
+
+.entry {
+  margin: 1em;
 }
 
 .notebook-icon {
