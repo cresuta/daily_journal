@@ -6,7 +6,7 @@ export const JournalEntryComponent = (entry) => {
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
         <div class="card-body">
           <h5 class="card-title">${entry.concept}</h5>
-          <p class="card-text">${entry.date}</p>
+          <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>
           <p>${entry.entry}</p>
           <i class="bi bi-emoji-smile mood"></i>
         </div>
@@ -18,7 +18,7 @@ export const JournalEntryComponent = (entry) => {
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
         <div class="card-body">
           <h5 class="card-title">${entry.concept}</h5>
-          <p class="card-text">${entry.date}</p>
+          <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>
           <p>${entry.entry}</p>
           <i class="bi bi-emoji-neutral mood"></i>
         </div>
@@ -30,7 +30,7 @@ export const JournalEntryComponent = (entry) => {
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
         <div class="card-body">
           <h5 class="card-title">${entry.concept}</h5>
-          <p class="card-text">${entry.date}</p>
+          <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>
           <p>${entry.entry}</p>
           <i class="bi bi-emoji-frown mood"></i>
         </div>

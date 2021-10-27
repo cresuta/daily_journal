@@ -43,7 +43,8 @@ body {
 .journal-form {
   display: flex;
   flex-direction: column;
-  margin: 1em 5em;
+  justify-content: center;
+  margin: 1em auto;
   width: 50vw;
 }
 
