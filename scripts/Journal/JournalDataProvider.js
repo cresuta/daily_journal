@@ -6,7 +6,7 @@
  *      the entries for different purposes.
  */
 
-const journalEntries = [];
+let journalEntries = [];
 
 export const useJournalEntries = () => {
     const sortedByDate = journalEntries.sort(

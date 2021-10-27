@@ -1,13 +1,21 @@
-import { useJournalEntries } from "../Journal/JournalDataProvider.js";
+import { useJournalEntries, getJournalEntries } from "../Journal/JournalDataProvider.js";
 import { JournalEntryComponent } from "../Journal/JournalEntry.js";
 
-const entryLog = document.querySelector('.journal-entries');
+const contentTarget = document.querySelector('.journal-entries');
 
 export const EntryListComponent = () => {
 
-    const entries = useJournalEntries();
-
-    for(let entry of entries) {
-        entryLog.innerHTML += JournalEntryComponent(entry);
-    }
+    getJournalEntries()
+    .then(() => {
+        let journalEntryArray = useJournalEntries();
+        let journalEntryListHTML = "";
+        journalEntryArray.forEach((singleEntry) => {
+            journalEntryListHTML += JournalEntryComponent(singleEntry);
+        })
+        
+        contentTarget.innerHTML = `
+        <h2>Journal Entries</h2>
+        ${journalEntryListHTML}
+        `
+    })
 }
