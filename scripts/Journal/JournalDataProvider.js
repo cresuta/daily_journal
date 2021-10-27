@@ -12,8 +12,8 @@ export const useJournalEntries = () => {
     const sortedByDate = journalEntries.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    ).slice()
-    return sortedByDate
+    )
+    return sortedByDate.slice()
 }
 
 export const getJournalEntries = () => {
@@ -32,4 +32,5 @@ export const saveJournalEntry = (entry) => {
         },
         body: JSON.stringify(entry)
     })
+    .then(getJournalEntries)
 }

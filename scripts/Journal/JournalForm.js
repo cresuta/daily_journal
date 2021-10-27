@@ -1,6 +1,36 @@
+import { saveJournalEntry } from "./JournalDataProvider.js";
+import { EntryListComponent } from "./JournalEntryList.js";
+
+const journalForm = document.querySelector('.journal-form');
+
+document.querySelector("body").addEventListener("click", clickEvent => {
+  if (clickEvent.target.id === "btn-record-journal") {
+
+    // Make a new journal entry object
+    const newJournalEntry = {
+      date: document.querySelector('#journalDate').value,
+      concept: document.querySelector('#journalConcepts').value,
+      entry: document.querySelector('#journalEntry').value,
+      mood: document.querySelector('#journalMood').value
+    }  
+
+    // Clearing all form values after recording new journal entry
+    document.querySelector('#journalDate').value = "";
+    document.querySelector('#journalConcepts').value = "";
+    document.querySelector('#journalEntry').value = "";
+    document.querySelector('#journalMood').value = "";
+
+    console.log(newJournalEntry);
+
+    // Change API state and application state
+    saveJournalEntry(newJournalEntry)
+    .then(EntryListComponent)
+  }
+
+})
+
 export const JournalFormComponent = () => {
-    const journalForm = document.querySelector('.journal-form');
-    journalForm.innerHTML += `
+    journalForm.innerHTML = `
     <section class="journal-form">
           <h2>Daily Journal</h2>
           <fieldset class="journal-date">
@@ -28,7 +58,7 @@ export const JournalFormComponent = () => {
               <option value="sad">Sad</option>
             </select>
           </fieldset>
-        <button type="button" class="btn btn-light btn-outline-dark">
+        <button type="button" class="btn btn-light btn-outline-dark" id="btn-record-journal">
           <i class="bi bi-journal-check"></i>
           Record Journal Entry
         </button>
