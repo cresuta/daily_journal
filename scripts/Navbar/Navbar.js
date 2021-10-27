@@ -1,4 +1,4 @@
-export const navbar = () => {
+export const Navbar = () => {
     const header = document.querySelector('header');
     header.innerHTML += `
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

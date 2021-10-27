@@ -1,4 +1,4 @@
-export const journalForm = () => {
+export const JournalFormComponent = () => {
     const journalForm = document.querySelector('.journal-form');
     journalForm.innerHTML += `
     <section class="journal-form">
