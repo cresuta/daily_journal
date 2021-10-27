@@ -2,8 +2,7 @@ export const JournalFormComponent = () => {
     const journalForm = document.querySelector('.journal-form');
     journalForm.innerHTML += `
     <section class="journal-form">
-    <h2>Daily Journal</h2>
-        <form action="">
+          <h2>Daily Journal</h2>
           <fieldset class="journal-date">
             <label for="journalDate">Date of entry</label>
             <input type="date" name="journalDate" id="journalDate" />
@@ -29,7 +28,6 @@ export const JournalFormComponent = () => {
               <option value="sad">Sad</option>
             </select>
           </fieldset>
-        </form>
         <button type="button" class="btn btn-light btn-outline-dark">
           <i class="bi bi-journal-check"></i>
           Record Journal Entry

@@ -33,11 +33,6 @@ body {
 }
 
 /* Form */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .journal-date,
 .journal-concepts,
 .journal-entry,
@@ -46,11 +41,50 @@ form {
 }
 
 .journal-form {
+  display: flex;
+  flex-direction: column;
   margin: 1em 5em;
+  width: 50vw;
 }
 
 label {
   padding: 0.5em;
+}
+
+.journal-date {
+  display: flex;
+  align-items: center;
+}
+
+.journal-date input {
+  margin: 1em;
+}
+
+.journal-concepts {
+  display: flex;
+  align-items: center;
+}
+
+.journal-concepts input {
+  margin: 1em;
+}
+
+.journal-entry {
+  display: flex;
+  align-items: center;
+}
+
+.journal-entry textarea {
+  margin: 1em;
+}
+
+.journal-mood {
+  display: flex;
+  align-items: center;
+}
+
+.journal-mood input {
+  margin: 1em;
 }
 
 /* Journal Entries */
@@ -60,14 +94,6 @@ label {
   align-items: center;
   margin: 5em 5em;
   flex-grow: 1;
-}
-
-.entry {
-  margin: 0 4em;
-  width: 33vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .notebook-icon {
