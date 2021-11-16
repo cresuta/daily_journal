@@ -2,7 +2,7 @@
 export const JournalEntryComponent = (entry, mood, instructor) => {
     if (mood.label === 'Happy') {
         return `
-        <div class="card entry" id="${entry.id}" style="width: 18rem;">
+        <div class="card entry shadow p-3 mb-5 bg-white rounded" id="${entry.id}" style="width: 18rem;">
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
         <div class="card-body">
           <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>
@@ -15,7 +15,7 @@ export const JournalEntryComponent = (entry, mood, instructor) => {
         `
     } else if (mood.label === 'Ok') {
         return `
-        <div class="card entry" id="${entry.id}" style="width: 18rem;">
+        <div class="card entry shadow p-3 mb-5 bg-white rounded" id="${entry.id}" style="width: 18rem;">
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
         <div class="card-body">
           <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>
@@ -28,7 +28,7 @@ export const JournalEntryComponent = (entry, mood, instructor) => {
     `
     } else {
         return `
-        <div class="card entry" id="${entry.id}" style="width: 18rem;">
+        <div class="card entry shadow p-3 mb-5 bg-white rounded" id="${entry.id}" style="width: 18rem;">
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
         <div class="card-body">
           <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>

@@ -43,50 +43,47 @@ export const JournalFormComponent = () => {
     const allMoods = useMoods();
     const allInstructors = useInstructors();
     journalForm.innerHTML = `
-    <section class="journal-form">
-          <h2>Daily Journal</h2>
-          <fieldset class="journal-date">
-            <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate" />
-          </fieldset>
-          <fieldset class="journal-concepts">
-            <label for="journalConcepts">Concepts covered</label>
-            <input type="text" name="journalConcepts" id="journalConcepts" />
-          </fieldset>
-          <fieldset class="journal-entry">
-            <label for="journalEntry">Journal Entry</label>
-            <textarea
-              name="text"
-              id="journalEntry"
-              cols="30"
-              rows="2"
-            ></textarea>
-          </fieldset>
-          <fieldset class="journal-instructor">
-            <label for="journalInstructor">Instructor</label>
-            <select name="" id="journalInstructor">
+    <form class="row g-3 note-form text-white bg-secondary p-3">
+      <h2>Daily Journal</h2>
+      <div class="col-md-12">
+          <label for="journalDate">Date of entry</label>
+          <input type="date" name="journalDate" id="journalDate" class="form-control" />
+      </div>
+      <div class="col-md-12">
+          <label for="journalMood">Mood Of The Day</label>
+          <select name="" class="form-select" id="journalMood">
             ${
-              allInstructors.map((instructor) => {
-                  return `<option value="${instructor.id}">${instructor.first_name} ${instructor.last_name}</option>`
-              }).join("")
-          }
-            </select>
-          </fieldset>
-          <fieldset class="journal-mood">
-            <label for="journalMood">Mood for the day</label>
-            <select name="" id="journalMood">
-            ${
-              allMoods.map((mood) => {
+                allMoods.map((mood) => {
                   return `<option value="${mood.id}">${mood.label}</option>`
-              }).join("")
-          }
-            </select>
-          </fieldset>
+                }).join("")
+            }
+          </select>
+      </div>
+      <div class="col-md-12">
+          <label for="journalConcepts">Concepts Covered</label>
+          <input type="text" name="journalConcepts" id="journalConcepts" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label for="noteSuspect" class="form-label">Instructor</label>
+        <select name="noteSuspect" class="form-control" id="journalInstructor">
+          <option value="0">Select an instructor...</option>
+              ${
+                 allInstructors.map((instructor) => {
+                     return `<option value="${instructor.id}">${instructor.first_name} ${instructor.last_name}</option>`
+                 }).join("")
+              }
+        </select> 
+      </div>
+      <div class="col-12">
+        <label for="journalEntry">Journal Entry</label>
+        <input type="text" name="journalEntry" class="form-control" id="journalEntry" />
+      </div>
+      <div class="col-6">
         <button type="button" class="btn btn-light btn-outline-dark" id="btn-record-journal">
-          <i class="bi bi-journal-check"></i>
-          Record Journal Entry
+          <i class="bi bi-journal-check"></i>Save Entry
         </button>
-    </section>
+      </div>
+    </form>
     `
   }) 
 }
