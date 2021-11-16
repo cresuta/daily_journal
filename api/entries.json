@@ -63,5 +63,19 @@
       "mood": "ok",
       "id": 9
     }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Ok"
+    },
+    {
+      "id": 2,
+      "label": "Sad"
+    },
+    {
+      "id": 3,
+      "label": "Happy"
+    }
   ]
 }
