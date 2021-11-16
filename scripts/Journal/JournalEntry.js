@@ -1,6 +1,6 @@
 
-export const JournalEntryComponent = (entry) => {
-    if (entry.mood === 'Happy') {
+export const JournalEntryComponent = (entry, mood) => {
+    if (mood.label === 'Happy') {
         return `
         <div class="card entry" id="${entry.id}" style="width: 18rem;">
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
@@ -12,7 +12,7 @@ export const JournalEntryComponent = (entry) => {
         </div>
         </div>
         `
-    } else if (entry.mood === 'Ok') {
+    } else if (mood.label === 'Ok') {
         return `
         <div class="card entry" id="${entry.id}" style="width: 18rem;">
         <i class="bi bi-journal-bookmark-fill notebook-icon"></i>
