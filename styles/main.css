@@ -36,7 +36,8 @@ body {
 .journal-date,
 .journal-concepts,
 .journal-entry,
-.journal-mood {
+.journal-mood,
+.journal-instructor {
   border: 2px solid darkgrey;
 }
 

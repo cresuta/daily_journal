@@ -3,37 +3,26 @@
     {
       "date": "2021-11-16",
       "concept": "API",
-      "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at augue a mauris hendrerit tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque eros urna, feugiat eget interdum vitae, varius in nibh. Aenean viverra tincidunt auctor. Pellentesque pharetra, ex at accumsan rhoncus, lectus velit gravida nibh, consectetur.",
+      "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus fringilla luctus. Vestibulum faucibus vestibulum sagittis. Praesent eget convallis est, ut lobortis urna. Sed non.",
       "moodId": 3,
+      "instructorId": 1,
       "id": 1
+    },
+    {
+      "date": "2021-11-14",
+      "concept": "API",
+      "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec maximus diam, ac eleifend erat. Sed maximus erat nunc, blandit venenatis purus feugiat sit amet.",
+      "moodId": 2,
+      "instructorId": 2,
+      "id": 2
     },
     {
       "date": "2021-11-18",
       "concept": "API",
-      "entry": "TEST",
-      "moodId": 2,
-      "id": 2
-    },
-    {
-      "date": "2021-11-01",
-      "concept": "TEST",
-      "entry": "Testing!",
-      "moodId": 3,
-      "id": 3
-    },
-    {
-      "date": "2021-11-03",
-      "concept": "TEST2",
-      "entry": "TEST2",
-      "moodId": 3,
-      "id": 4
-    },
-    {
-      "date": "2021-09-07",
-      "concept": "TEST3",
-      "entry": "TEST3",
+      "entry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec maximus diam, ac eleifend erat. Sed maximus erat nunc, blandit venenatis purus feugiat sit amet.",
       "moodId": 1,
-      "id": 5
+      "instructorId": 3,
+      "id": 3
     }
   ],
   "moods": [
@@ -48,6 +37,23 @@
     {
       "id": 3,
       "label": "Happy"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "first_name": "Tommy",
+      "last_name": "Spurlock"
+    },
+    {
+      "id": 2,
+      "first_name": "Sarah",
+      "last_name": "Brooks"
+    },
+    {
+      "id": 3,
+      "first_name": "Jordan",
+      "last_name": "Castelloe"
     }
   ]
 }
