@@ -1,5 +1,6 @@
-import { saveJournalEntry } from "./JournalDataProvider.js";
+import { getJournalEntries, saveJournalEntry, useJournalEntries } from "./JournalDataProvider.js";
 import { EntryListComponent } from "./JournalEntryList.js";
+import { getMoods, useMoods } from "./MoodDataProvider.js";
 
 const journalForm = document.querySelector('.journal-form');
 
@@ -11,7 +12,7 @@ document.querySelector("body").addEventListener("click", clickEvent => {
       date: document.querySelector('#journalDate').value,
       concept: document.querySelector('#journalConcepts').value,
       entry: document.querySelector('#journalEntry').value,
-      mood: document.querySelector('#journalMood').value
+      moodId: parseInt(document.querySelector('#journalMood').value)
     }  
 
     // Clearing all form values after recording new journal entry
@@ -30,6 +31,9 @@ document.querySelector("body").addEventListener("click", clickEvent => {
 })
 
 export const JournalFormComponent = () => {
+  getMoods()
+  .then(() => {
+    const allMoods = useMoods();
     journalForm.innerHTML = `
     <section class="journal-form">
           <h2>Daily Journal</h2>
@@ -53,9 +57,11 @@ export const JournalFormComponent = () => {
           <fieldset class="journal-mood">
             <label for="journalMood">Mood for the day</label>
             <select name="" id="journalMood">
-              <option value="happy">Happy</option>
-              <option value="ok">Ok</option>
-              <option value="sad">Sad</option>
+            ${
+              allMoods.map((mood) => {
+                  return `<option value="${mood.id}">${mood.label}</option>`
+              }).join("")
+          }
             </select>
           </fieldset>
         <button type="button" class="btn btn-light btn-outline-dark" id="btn-record-journal">
@@ -64,4 +70,5 @@ export const JournalFormComponent = () => {
         </button>
     </section>
     `
+  }) 
 }
