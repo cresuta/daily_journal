@@ -33,20 +33,13 @@ body {
 }
 
 /* Form */
-.journal-date,
-.journal-concepts,
-.journal-entry,
-.journal-mood,
-.journal-instructor {
-  border: 2px solid darkgrey;
-}
-
 .journal-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 1em auto;
   width: 50vw;
+  border-radius: 10px;
 }
 
 label {
@@ -110,6 +103,17 @@ label {
 
 .mood {
   font-size: 2em;
+}
+
+.card-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Footer */

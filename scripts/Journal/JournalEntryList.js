@@ -15,10 +15,7 @@ export const EntryListComponent = () => {
         const moodsArray = useMoods();
         const instructorsArray = useInstructors();
         let journalEntryListHTML = "";
-        // journalEntryArray.forEach((singleEntry) => {
-        //     journalEntryListHTML += JournalEntryComponent(singleEntry);
-        // })
-
+        
         journalEntryArray.map(entry => {
             const relatedMood = moodsArray.find(mood => mood.id === entry.moodId)
             const relatedInstructor = instructorsArray.find(instructor => instructor.id === entry.instructorId)
@@ -28,8 +25,5 @@ export const EntryListComponent = () => {
             `
         })
         
-        // contentTarget.innerHTML = `
-        // ${journalEntryListHTML}
-        // `
     })
 }

@@ -43,7 +43,7 @@ export const JournalFormComponent = () => {
     const allMoods = useMoods();
     const allInstructors = useInstructors();
     journalForm.innerHTML = `
-    <form class="row g-3 note-form text-white bg-secondary p-3">
+    <form class="row g-3 note-form text-white bg-secondary p-3 journal-form">
       <h2>Daily Journal</h2>
       <div class="col-md-12">
           <label for="journalDate">Date of entry</label>
