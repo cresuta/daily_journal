@@ -50,7 +50,6 @@ export const JournalEntryComponent = (entry, mood, instructor) => {
         <p class="card-text">${new Date(entry.date).toLocaleDateString('en-US')}</p>
         </div>
         <div class="card-body">
-          
           <h5 class="card-title">${entry.concept}</h5>
           <p class="card-text">Instructor: ${instructor.first_name} ${instructor.last_name}</p>
           <p>${entry.entry}</p>
